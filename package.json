@@ -1,6 +1,6 @@
 {
   "name": "rbase",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Base components enabling quick start up times on React projects",
   "main": "./lib/index.js",
   "scripts": {
