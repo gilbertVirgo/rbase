@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
     "jsx": "react",
     "outDir": "./lib",
     "strict": true,
@@ -16,6 +16,9 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": [
     "src"
@@ -24,25 +27,3 @@
     "node_modules"
   ]
 }
-// {
-//   "compilerOptions": {
-//     "jsx": "react",
-//     "target": "es5",
-//     "module": "esnext",
-//     "declaration": true,
-//     "outDir": "./lib",
-//     "strict": true,
-//     "lib": [
-//       "es6",
-//       "dom",
-//       "es2017"
-//     ],
-//     "suppressImplicitAnyIndexErrors": true
-//   },
-//   "include": [
-//     "src"
-//   ],
-//   "exclude": [
-//     "node_modules"
-//   ]
-// }

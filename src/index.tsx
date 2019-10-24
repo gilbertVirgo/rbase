@@ -17,3 +17,4 @@ export const View = (props: { children?: JSX.Element | JSX.Element[] } & all) =>
 export const Image = (props: ImageProps & all) => {
     return <img src={props.src} alt={props.alt} style={parse(props)} />
 }
+
