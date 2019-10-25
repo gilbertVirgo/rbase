@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { all, parse } from "styluss";
 
 interface TextProps extends all {
@@ -22,20 +22,21 @@ interface ButtonProps extends DefaultProps {
     onTouchEnd?: any
 }
 
-export const Text = (props: TextProps) => (
-    <p style={parse(props)}>{props.children}</p>
-);
+export const Text = forwardRef((props: TextProps, ref: any) => (
+    <p ref={ref} style={parse(props)}>{props.children}</p>
+));
 
-export const View = (props: DefaultProps) => (
-    <div style={parse(props)}>{props.children}</div>
-);
+export const View = forwardRef((props: DefaultProps, ref: any) => (
+    <div ref={ref} style={parse(props)}>{props.children}</div>
+));
 
-export const Image = (props: ImageProps) => (
-    <img style={parse(props)} src={props.src} alt={props.alt} />
-);
+export const Image = forwardRef((props: ImageProps, ref: any) => (
+    <img ref={ref} style={parse(props)} src={props.src} alt={props.alt} />
+));
 
-export const Button = (props: ButtonProps) => (
+export const Button = forwardRef((props: ButtonProps, ref: any) => (
     <div
+        ref={ref}
         style={parse(props)}
         onPointerDown={props.onPointerDown}
         onPointerUp={props.onPointerUp}
@@ -44,4 +45,4 @@ export const Button = (props: ButtonProps) => (
         onTouchEnd={props.onTouchEnd}>
         {props.children}
     </div>
-);
+));
