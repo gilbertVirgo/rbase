@@ -5,7 +5,6 @@
   "main": "./lib/index.js",
   "scripts": {
     "patch": "tsc && git add . && git commit -m 'patch' && git push && npm version patch && npm publish",
-    "test": "tsc && react-scripts start test",
     "build": "tsc",
     "start": "react-scripts start"
   },
