@@ -1,17 +1,6 @@
 import React from "react";
 import { all, parse } from "styluss";
 
-import ReactDOM from "react-dom";
-
-const sets = {
-    default: {
-        "font-family": "monospace",
-        color: "blue"
-    }
-}
-
-
-
 interface TextProps extends all {
     children?: JSX.Element | JSX.Element[] | string // Include elements in the case of <b>, <i>, etc.
 }
@@ -55,11 +44,4 @@ export const Button = (props: ButtonProps) => (
         onTouchEnd={props.onTouchEnd}>
         {props.children}
     </div>
-);
-
-ReactDOM.render(
-    <View margin="0 auto" width="100%" max-width="500px">
-        <Text font-size="75px" text-align="center" {...sets.default}>Hello world!</Text>
-    </View>,
-    document.getElementById("root")
 );
