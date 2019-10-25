@@ -28,7 +28,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "^3.2.0",
-    "styluss": "^1.0.13"
+    "styluss": "^1.0.14"
   },
   "browserslist": {
     "production": [
